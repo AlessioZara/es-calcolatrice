@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <body>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <table id = "tbl1" border = "2">
+                <tr>
+                    <th>N1</th>
+                    <th>Segno</th>
+                    <th>N2</th>
+                    <th>Risultato</th>
+                </tr>
+            </table>
+            <p>numero 1: <input id = "numero1" type="number"></p>
+            <p>numero 2: <input id = "numero2" type="number"></p>
+            <button id="btn1">+</button>
+            <button id="btn2">-</button>
+            <button id="btn3">/</button>
+            <button id="btn4">x</button>
+        
+            <script>
+            $("#btn1").click(function(){
+
+                $("#tbl1").append(
+                    "<tr>",
+                        "<td>"+$("#numero1").val()+"</td>"+
+                        "<td>"+"+"+"</td>"+
+                        "<td>"+$("#numero2").val()+"</td>"+
+                    "</tr>"
+                );
+            });
+            </script>
+        </body>
+    </head>
+</html>
