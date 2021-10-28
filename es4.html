@@ -3,7 +3,7 @@
         <body>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-            <table id = "tbl1" border = "2">
+            <table id = "tbl1" border = "2" style="text-align: center;">
                 <tr>
                     <th>N1</th>
                     <th>Segno</th>
@@ -26,6 +26,43 @@
                         "<td>"+$("#numero1").val()+"</td>"+
                         "<td>"+"+"+"</td>"+
                         "<td>"+$("#numero2").val()+"</td>"+
+                        "<td>"+(parseInt($("#numero1").val()) + parseInt($("#numero2").val()))+"</td>",
+                    "</tr>"
+                );
+            });
+
+            $("#btn2").click(function(){
+
+                $("#tbl1").append(
+                    "<tr>",
+                        "<td>"+$("#numero1").val()+"</td>"+
+                        "<td>"+"-"+"</td>"+
+                        "<td>"+$("#numero2").val()+"</td>"+
+                        "<td>"+(parseInt($("#numero1").val()) - parseInt($("#numero2").val()))+"</td>",
+                    "</tr>"
+                );
+            });
+
+            $("#btn3").click(function(){
+
+                $("#tbl1").append(
+                    "<tr>",
+                        "<td>"+$("#numero1").val()+"</td>"+
+                        "<td>"+"/"+"</td>"+
+                        "<td>"+$("#numero2").val()+"</td>"+
+                        "<td>"+(parseInt($("#numero1").val()) / parseInt($("#numero2").val()))+"</td>",
+                    "</tr>"
+                );
+            });
+
+            $("#btn4").click(function(){
+
+                $("#tbl1").append(
+                    "<tr>",
+                        "<td>"+$("#numero1").val()+"</td>"+
+                        "<td>"+"*"+"</td>"+
+                        "<td>"+$("#numero2").val()+"</td>"+
+                        "<td>"+(parseInt($("#numero1").val()) * parseInt($("#numero2").val()))+"</td>",
                     "</tr>"
                 );
             });
