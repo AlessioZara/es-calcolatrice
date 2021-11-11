@@ -13,59 +13,60 @@
             </table>
             <p>numero 1: <input id = "numero1" type="number"></p>
             <p>numero 2: <input id = "numero2" type="number"></p>
-            <button id="btn1">+</button>
-            <button id="btn2">-</button>
-            <button id="btn3">/</button>
-            <button id="btn4">x</button>
+            <button id = "btn1">+</button>
+            <button id = "btn2">-</button>
+            <button id = "btn3">/</button>
+            <button id = "btn4">*</button>
         
             <script>
-            $("#btn1").click(function(){
-
+            $("button").click(function(e){
+                var num1 = parseInt($("#numero1").val());
+                var num2 = parseInt($("#numero2").val());
                 $("#tbl1").append(
                     "<tr>",
                         "<td>"+$("#numero1").val()+"</td>"+
-                        "<td>"+"+"+"</td>"+
+                        "<td>"+e.target.innerText +"</td>"+
                         "<td>"+$("#numero2").val()+"</td>"+
-                        "<td>"+(parseInt($("#numero1").val()) + parseInt($("#numero2").val()))+"</td>",
+                        "<td>"+eval(num1 + e.target.innerText + num2)+"</td>",
                     "</tr>"
                 );
             });
 
-            $("#btn2").click(function(){
+//             $("#btn2").click(function(){
 
-                $("#tbl1").append(
-                    "<tr>",
-                        "<td>"+$("#numero1").val()+"</td>"+
-                        "<td>"+"-"+"</td>"+
-                        "<td>"+$("#numero2").val()+"</td>"+
-                        "<td>"+(parseInt($("#numero1").val()) - parseInt($("#numero2").val()))+"</td>",
-                    "</tr>"
-                );
-            });
+//                 $("#tbl1").append(
+//                     "<tr>",
+//                         "<td>"+$("#numero1").val()+"</td>"+
+//                         "<td>"+"-"+"</td>"+
+//                         "<td>"+$("#numero2").val()+"</td>"+
+//                         "<td>"+(parseInt($("#numero1").val()) - parseInt($("#numero2").val()))+"</td>",
+//                     "</tr>"
+//                 );
+//             });
 
-            $("#btn3").click(function(){
+//             $("#btn3").click(function(){
 
-                $("#tbl1").append(
-                    "<tr>",
-                        "<td>"+$("#numero1").val()+"</td>"+
-                        "<td>"+"/"+"</td>"+
-                        "<td>"+$("#numero2").val()+"</td>"+
-                        "<td>"+(parseInt($("#numero1").val()) / parseInt($("#numero2").val()))+"</td>",
-                    "</tr>"
-                );
-            });
+//                 $("#tbl1").append(
+//                     "<tr>",
+//                         "<td>"+$("#numero1").val()+"</td>"+
+//                         "<td>"+"/"+"</td>"+
+//                         "<td>"+$("#numero2").val()+"</td>"+
+//                         "<td>"+(parseInt($("#numero1").val()) / parseInt($("#numero2").val()))+"</td>",
+//                     "</tr>"
+//                 );
+//             });
 
-            $("#btn4").click(function(){
+//             $("#btn4").click(function(){
 
-                $("#tbl1").append(
-                    "<tr>",
-                        "<td>"+$("#numero1").val()+"</td>"+
-                        "<td>"+"*"+"</td>"+
-                        "<td>"+$("#numero2").val()+"</td>"+
-                        "<td>"+(parseInt($("#numero1").val()) * parseInt($("#numero2").val()))+"</td>",
-                    "</tr>"
-                );
-            });
+//                 $("#tbl1").append(
+//                     "<tr>",
+//                         "<td>"+$("#numero1").val()+"</td>"+
+//                         "<td>"+"*"+"</td>"+
+//                         "<td>"+$("#numero2").val()+"</td>"+
+//                         "<td>"+(parseInt($("#numero1").val()) * parseInt($("#numero2").val()))+"</td>",
+//                     "</tr>"
+//                 );
+//             });
             </script>
         </body>
     </head>
